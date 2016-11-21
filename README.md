@@ -46,3 +46,4 @@ As a user, I should be able to:
     - [The Angular Spotify Service](https://github.com/eddiemoore/angular-spotify)
     - [The Spotify Web API](https://developer.spotify.com/web-api/user-guide/)
     - [One of Spotify's sponsered Web API Wrappers](https://developer.spotify.com/web-api/code-examples/)
+# angular-spotify-search
