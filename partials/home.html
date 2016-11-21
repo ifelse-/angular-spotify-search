@@ -1,0 +1,72 @@
+<div class="music-search">
+<h1><img src="assets/img/spotify.png"> Search Music</h1>
+<p>Spotify is a digital music service that gives you access to millions of songs.<br> Type an artist name and click on "Search". Then, click on any album from the results to play 30 seconds of its first track. </p>
+<form ng-submit=submit() >
+
+	<div class="input-group col-md-12">
+	    <input type="text" class="search-query form-control" ng-model="searchArtist" placeholder="Search" />
+	    <span class="input-group-btn">
+	        <button class="btn btn-success" type="submit">
+	            <span class=" glyphicon glyphicon-search"></span>
+	        </button>
+	    </span>
+	</div>
+
+</form>
+
+<div class="search-radion-btn" ng-click="radioSelect(radioSearch)" ng-init="radioSearch=1">
+ <label class="radio-inline">
+      <input type="radio" name="optradio" ng-model="radioSearch" ng-value="1">Artist Name
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" ng-model="radioSearch" ng-value="2">Album Name
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" ng-model="radioSearch" ng-value="3">Song Title
+  </label>
+</div>  
+
+</div>
+
+
+
+<div class="row">
+
+<div class="col-md-6 music-results">
+
+<!-- Directive -->
+<artist-result-direct></artist-result-direct>
+<!-- Directive -->
+
+</div>
+
+
+
+
+<div class="top-list col-md-4 pull-right">
+	<h2>My Top List</h2>
+<ul>
+<li ng-repeat="mymusic in TopListResults">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="glyphicon glyphicon-user"></i> {{mymusic.name}}</h4>
+                    </div>
+                    <div class="panel-body">
+ <p> <img ng-src="{{mymusic.image || 'assets/img/no-thumb.jpg' }}" width="100%"></p>
+ <!--<p> {{mymusic.genres}}</p>-->
+ <p><span class="glyphicon glyphicon-star"></span> <strong>Followers:</strong> {{mymusic.followers}}</p>
+ <p><span class="glyphicon glyphicon-heart"></span> <strong>Popularity:</strong> {{mymusic.popularity}}</p>
+
+                        <p>
+                        	 <div class="form-group">
+  <label for="comment">Comment:</label>
+  <textarea class="form-control" rows="5" id="comment"></textarea>
+</div>
+                        </p>
+                        <a href="#" class="btn btn-default">Add Note</a>
+                    </div>
+                </div>
+            </div>
+   </li>         
+</ul>
+</div>

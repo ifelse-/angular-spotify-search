@@ -1,0 +1,15 @@
+	<ul>
+	<li ng-repeat="result in SpotifyArtistResults.artists.items" ng-click="addFavorite(result)">
+	<div class="result-box">
+	<!-- {{$index + 1}} -->
+	<h1><span class="glyphicon glyphicon-heart"></span>  {{result.name}}</h1>
+
+	<img ng-src="{{result.images[0].url || 'assets/img/no-thumb.jpg' }}" width="100%">
+
+	<div class="btn-wrap text-center">
+	<a href="{{result.external_urls.spotify}}" target="_blank"><img ng-src="assets/img/spotify-connect.png"></a>
+	</div>
+
+	</div>
+	</li>
+	</ul>
