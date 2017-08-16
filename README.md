@@ -2,6 +2,8 @@
 
 Preview Here: http://giveme5ive.com/dev/angular-top-songs
 
+If search doesn't work Spotify may have updated there API. You can download and get the most recent API from spotify developer website.
+
 Thanks for taking the time to take our challenge. We're hoping you can prove that you're able to follow a few guidelines and deliver a simple, yet full featured application.
 
  
